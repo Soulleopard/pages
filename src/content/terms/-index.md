@@ -4,18 +4,18 @@ title: Terms & Conditions
 
 ## Copyright
 
-&copy; 2025 Jane Doe. All rights reserved.
+&copy; 2025 Tristan Ross. All rights reserved.
 
 ## Reuse
 
 ### Source Code
 
-The source code for janedoe.com is protected under the MIT License. In short, you can do as you see fit, so long as you include the original copyright notice in any copy of the software.
+The source code for advynt.tristanross.net is protected under the MIT License. In short, you can do as you see fit, so long as you include the original copyright notice in any copy of the software.
 
 ```md
 The MIT License (MIT)
 
-Copyright (c) 2025 Jane Doe
+Copyright (c) 2025 Tristan Ross
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -47,7 +47,7 @@ It is not permitted to mirror or re-publish the content of this website. That in
 
 ## Attributions
 
-This source code is derivative of [Astrogon](https://github.com/astrogon/astrogon) by [Reed Nelson](https://github.com/reednel), which uses the license below.
+This source code is derivative of [astrogon](https://github.com/astrogon/astrogon) by [Reed Nelson](https://github.com/reednel), which uses the license below.
 
 ```md
 The MIT License (MIT)

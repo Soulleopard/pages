@@ -33,20 +33,6 @@ const authors = defineCollection({
   }),
 });
 
-const blog = defineCollection({
-  loader: glob({ pattern: '**\/[^_]*.{md,mdx}', base: "./src/content/blog" }),
-  schema: ({ image }) => searchable.extend({
-    date: z.date().optional(),
-    image: image().optional(),
-    imageAlt: z.string().default("image"),
-    author: reference('authors').optional(),
-    categories: z.array(z.string()).optional(),
-    tags: z.array(z.string()).optional(),
-    complexity: z.number().default(1),
-    hideToc: z.boolean().default(false),
-  }),
-});
-
 const docs = defineCollection({
   loader: glob({ pattern: '**\/[^_]*.{md,mdx}', base: "./src/content/docs" }),
   schema: ({ image }) => searchable.extend({
@@ -111,7 +97,6 @@ const terms = defineCollection({
 export const collections = {
   about,
   authors,
-  blog,
   docs,
   home,
   poetry,

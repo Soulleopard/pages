@@ -1,5 +1,5 @@
 ---
-title: Jane Doe
+title: Tristan Ross
 email: janedoe@email.com
 image: "@assets/profile/avatar.png"
 social:

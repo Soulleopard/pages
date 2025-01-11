@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Astrogon",
-    "base_url": "https://janedoe.com",
+    "title": "Advynt",
+    "base_url": "https://advynt.tristanross.net",
     "base_path": "/"
   },
 
@@ -21,7 +21,7 @@
   },
 
   "metadata": {
-    "meta_author": "Jane Doe",
+    "meta_author": "Tristan Ross",
     "meta_image": "@assets/og-image.png",
     "meta_description": "Template website"
   }
