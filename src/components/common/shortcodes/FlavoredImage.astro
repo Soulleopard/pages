@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  image: any;
+  imageAlt: string;
+}
+
+const { image, imageAlt }: Props = Astro.props;
+---
+
+<div class="glass flex group m-2 rounded-lg intersect:animate-fade opacity-0 min-w-[250px] min-h-[350px]">
+  <div class="rounded-lg">
+    <Image
+      class="relative w-full h-full self-stretch m-0 rounded-lg object-cover"
+      src={image}
+      alt={imageAlt}
+      width={1280}
+      height={720}
+      format="webp"
+    />
+    <div
+      class="glass-t-borderless invisible group-hover:visible absolute inset-0 rounded-lg px-4 py-0"
+    >
+      <slot />
+    </div>
+  </div>
+</div>
