@@ -1,7 +1,7 @@
 ---
 title: Hey, I am Tristan Ross!
 description: this is meta description
-image: "@assets/profile/avatar.png"
+image: "@assets/profile/jane-doe.jpg"
 draft: false
 ---
 

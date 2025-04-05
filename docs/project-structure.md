@@ -5,8 +5,8 @@
 ### Git/GitHub & Project Stuff
 
 - `.git` is a hidden folder. It is the thing containing all the git tracking. It should never be editied manually. Basically you should just ignore it, it's hidden for a reason.
+- `.github/` contains GitHub-specific files for the repository. If you want to use Github Pages as a host, you'd put a deployment script in here. However right now it's only purpose is to beg for your money. ...Probably just delete this folder.
 - `.gitignore` is a file that tells git which files and folders not to track. Some of the stuff in the repository you only want to have locally. That could be really big assets, files with sensitive info like keys, etc. You likely won't need to edit this at all.
-- `.github` is a folder with GitHub specific things, of course. For your purposes, all this does is hold the script that automatically builds and deploys your site to your space on GitHub Pages. You should not need to touch this folder either.
 - `README.md` is the project README, of course. You can put whatever you want here, it will be displayed on the the repo's page on GitHub.
 - `LICENSE` contains the license details. The MIT license is a good and honorable one. You should not use a more restrictive license than this on the repository overall. As a software license, it doen not apply to the actual content, such as your writings. I added a `/terms` page where you will be able to outline whatever permissions you want. I have something there for my own site, but I'm no lawyer.
 
@@ -23,7 +23,7 @@
 - `assets/` is where you put all images that will be displayed on the site. Preferably, don't dump every image right in there, make subdirectories. For example, if you keep the blog content collection, make a folder `blog`, and put any images your blog uses in there. Even make one subdirectory per blog post.
 - `content/` is where all your content collections live.
   - For uniformity, a collection is defined for each "original content" driven page on the website, even if it's a solitary piece of content, such as the `terms` or `about` page.
-  - The data type for each content collection is defined in the `config.ts` file. It will need to be updated if you want to edit the schema of a collection or add a new collection altogether.
+  - The data type for each content collection is defined in `/src/content/config.ts`. It will need to be updated if you want to edit the schema of a collection or add a new collection altogether.
   - Once development is pretty much done on your site and you're happy with how everything looks and is structured, the expectation is that you will rarely need to interact with anything outside of this folder (and `assets`).
 - `pages/` contains all the pages.
   - The structure of this folder defines the routing structure for your site. So if in the `pages` folder you have `blog/categories/index.astro`, you will have that page `index.astro` located at `example.com/blog/categories`.
@@ -35,9 +35,8 @@
     - In this way, we decouple the routing and data querying from the structure/style of the pages themselves. You'd be encouraged to appreciate this design choice and stick to it, unless you specifically have other plans.
 - `components/` contains all components, which are modular pieces of HTML/CSS/JS. There are three kinds of subdirectory:
   1. `[collection]/` contains all layouts and other components specialized to that collection.
-     1. `PageLayout` defines the structure of the entry within a singleton collection.
-     2. `EntryLayout` defines the structure of a collection entry page.
-     3. `CollectionLayout` defines the structure of the page(s) displaying the collection entries.
+     1. `EntryLayout` defines the structure of a collection entry page.
+     2. `CollectionLayout` defines the structure of the page(s) displaying the collection entries.
   2. `common/` contains components that are generic enough to be used across collections.
      - `shortcodes/` mainly contains components intended for use directly in `.mdx` content files.
   3. `base/` contains the base layout and associated components. Every other layout in the project is wrapped by `base/BaseLayout.astro`. Therefore the base layout code is applied to every page on the site.
