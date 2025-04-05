@@ -166,6 +166,7 @@ const terms = defineCollection({
 export const collections = {
   about,
   authors,
+  blog,
   docs,
   home,
   indexCards,
