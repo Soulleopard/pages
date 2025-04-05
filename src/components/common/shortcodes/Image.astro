@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  src: any;
+  alt: string;
+  w?: string;
+  h?: string;
+  minW?: string;
+  minH?: string;
+  maxW?: string;
+  maxH?: string;
+}
+
+const { src, alt, w, h, minW, minH, maxW, maxH }: Props = Astro.props;
+const hasFlavor = Astro.slots.has("default");
+---
+
+<div class=`glass flex group m-2 rounded-lg intersect:animate-fade opacity-0 min-w-[1px]
+  ${w ? " w-[" + w + "]" : ""}
+  ${h ? " h-[" + h + "]" : ""}
+  ${minW ? " min-w-[" + minW + "]" : ""}
+  ${minH ? " min-h-[" + minH + "]" : ""}
+  ${maxW ? " max-w-[" + maxW + "]" : ""}
+  ${maxH ? " max-h-[" + maxH + "]" : ""}
+`>
+  <div class="rounded-lg">
+    <Image
+      class="relative w-full h-full self-stretch m-0 rounded-lg object-cover"
+      src={src}
+      alt={alt}
+      width={1280}
+      height={720}
+      format="webp"
+    />
+    {
+      hasFlavor && (
+        <div class="glass-t-borderless invisible group-hover:visible absolute inset-0 rounded-lg px-4 py-0">
+          <slot />
+        </div>
+      )
+    }
+  </div>
+</div>
