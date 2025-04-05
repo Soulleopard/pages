@@ -1,6 +1,6 @@
 ---
 title: Create
 description: Character creation
-image: "@assets/placeholder.png"
+image: "@assets/docs/create/cover.jpg"
 draft: false
 ---
