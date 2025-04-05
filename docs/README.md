@@ -13,13 +13,30 @@ Recommended reading order:
 
 ## Git Quick Reference
 
+### Understanding
+
+A git **repository** is a collection of files and folders that are tracked by the version control system called **git**. Each **branch** of a repo is a separate line of development, and each branch can have its own set of files and folders. When you **checkout** a branch, you're telling git to switch to that line of development, and the files and folders in the repo will change to match the state of that branch. When you make changes to these files, you can **commit** them to the repository, which saves a snapshot of the files at that moment in time. You can then **push** these changes to a remote repository, like GitHub, where they can be accessed by others. In the git world, a **remote** is a repository that is hosted on a server (as in, the one you see on Github), and **origin** is the default name for the remote repository that the local repository was cloned from.
+
+#### Your branches
+
+- `main` is the default branch, the trunk of the tree. This branch is connected to the astrogon template, and just because of the way we're structuring this repo, where it's holding both your base site and the Advynt site, leave this branch alone.
+- `www/main` is the branch that holds the base site. Whatever code is applied to this branch will be automatically published to the live website. It is very possible that all your code works on your local machine, but breaks on the remote server, causing your site to go down. For that reason, you should not push to this branch directly.
+- `www/dev` is the branch intended for development of the base site.
+- `advynt/main` is the branch that holds the Advynt site. All the same rules apply here as for `www/main`.
+- `advynt/dev` is the branch intended for development of the Advynt site.
+
+### Setup
+
+- Clone the repo: `git clone https://github.com/Soulleopard/pages.git`
+- Checkout the Advynt development branch: `git checkout advynt/dev`
+
 ### The Main Loop
 
 Once you've made all the changes you want...
 
 - Stage your changed files for commit: `git add .`
 - Commit them, with a descriptive message: `git commit -m "message here"`
-- Push the changes up to GitHub: `git push origin main`
+- Push the changes up to GitHub: `git push origin advynt/dev`
 
 ### Other Useful Commands
 
