@@ -29,4 +29,9 @@
   li::marker {
     @apply text-txt-s dark:text-darkmode-txt-s;
   }
+  li {
+    p {
+      @apply m-0; // in .mdx files, li elements can contain <p> tags
+    }
+  }
 }
